@@ -624,8 +624,11 @@
             });
 
             var aaSortingFixed = new Array();
+            // Customise the script to add the ability to disable sorting.
+            if (properties.sGroupingColumnSortDirection !== 'none') {
             aaSortingFixed.push([properties.iGroupingOrderByColumnIndex, properties.sGroupingColumnSortDirection]);
-            if (properties.iGroupingColumnIndex2 != -1) {
+            }
+            if (properties.iGroupingColumnIndex2 != -1 && properties.sGroupingColumnSortDirection2 !== 'none') {
                 aaSortingFixed.push([properties.iGroupingOrderByColumnIndex2, properties.sGroupingColumnSortDirection2]);
             } // end of if (properties.iGroupingColumnIndex2 != -1)
 
